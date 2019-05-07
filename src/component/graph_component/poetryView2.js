@@ -26,10 +26,6 @@ export default class PoetryView extends React.Component{
             '乐': '#f0c239',
             '思': '#339999', 
         }
-        // console.log(
-        // cos_dist(dataStore.getWord2vec('喜'), dataStore.getWord2vec('喜')),
-        // cos_dist(dataStore.getWord2vec('喜'), dataStore.getWord2vec('怒'))
-        // )
     }
 
     getWord2color(word){
@@ -44,7 +40,7 @@ export default class PoetryView extends React.Component{
                 close_emotion = emotion
             }
         }
-        if (min_dist>0.7) {
+        if (min_dist>1) {
             return 'none'
         }
         // console.log(word, close_emotion, min_dist)
@@ -141,7 +137,7 @@ export default class PoetryView extends React.Component{
             console.warn('没有selected_sim_potery')
             return
         }
-        console.log(selected_sim_potery)
+        
         const center_p = center_poetry.author, other_p = selected_sim_potery.author
         let related_p = dataStore.myDijkstra(center_p, other_p)  //共同的交集
         d3.select(relation_g).selectAll('g').remove()
@@ -152,7 +148,7 @@ export default class PoetryView extends React.Component{
         related_p.push(center_p)
         related_p.push(other_p)
         related_p = [...new Set(related_p)]
-
+        // console.log(selected_sim_potery, related_p)
         if (related_p.length>15) {
             const n1 = dataStore.person2dijkstra_graph[center_p],
             n2 = dataStore.person2dijkstra_graph[other_p]
@@ -166,11 +162,7 @@ export default class PoetryView extends React.Component{
 
 
         // 整成四类
-        const p2code = {}
-
-
         const start_x = sim_potery_x + 270
-
         const container_g = d3.select(relation_g).append('g')
         .attr('transform',"translate(" + [start_x, paragraphs2y[selected_par_index]] + ")")
 
@@ -186,7 +178,7 @@ export default class PoetryView extends React.Component{
             related_p.forEach(p2=>{
                 const rel = dataStore.person2reltions[p1][p2]
                 if (rel) {
-                    // console.log(p1, p2, rel)
+                    console.log(p1, p2, rel)
                     edges.push({
                         source: p2index[p1],
                         target: p2index[p2],
@@ -210,11 +202,11 @@ export default class PoetryView extends React.Component{
         // console.log(max_x, max_y)
 
         // console.log(edges, nodes)
-        edges.forEach(elm=>{
-            if (elm.source.name) {
+        // edges.forEach(elm=>{
+        //     if (elm.source.name) {
                 
-            }
-        })
+        //     }
+        // })
         const normalLiner  = d3.line()
         .x(d=> xScale(d.x))
         .y(d=> yScale(d.y))
@@ -225,6 +217,7 @@ export default class PoetryView extends React.Component{
         .enter()
         .append("path")
         .attr('d', d=>{
+            // console.log(d.source.name, d.target.name)
             return normalLiner([
                 d.source,
                 d.target
@@ -352,17 +345,10 @@ export default class PoetryView extends React.Component{
                         })
                         
                         let points_text =  tra_points.map(elm=> elm.join(',')).join(' ')
-                        // console.log(points_text)
                         ryth_g.append('polygon')
-                        // .attr('class', 'polygon_' + char + index)
                         .attr('points', points_text)
                         .attr('fill', tra_color)
                         .attr('stroke', tra_color!=='none'?tra_color:'black')
-                        // .style({
-                        //     fill: 'blue',//tra_color, 
-                        //     stroke: 'blue',tra_color,
-                        //     'stroke-width': 4
-                        // }) 
                     })
                     now_x += dx                    
                 })

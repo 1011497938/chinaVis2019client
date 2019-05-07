@@ -6,7 +6,9 @@ import kmeans from 'ml-kmeans'
 // import cos_dist from 'compute-cosine-distance'
 import forceBundle from '../../dataManager/forceBundle'
 import eucDist from 'euclidean-distance'
+import { observable, autorun} from "mobx";
 
+let selected_time_range = observable.box([0,0])
 export default class MapAndLifeView extends React.Component{
     constructor(props){
         super(props)
@@ -17,14 +19,14 @@ export default class MapAndLifeView extends React.Component{
         this.addrs = []
         this.life_cluster = []
     }
-
+    
     componentWillMount(){
         this.nian_pu = dataStore.getNianPuSortByTime()
         this.addrs = dataStore.getNianPuSortByPlace()
 
         let {nian_pu, addrs} = this
         // 人生阶段的聚类
-        let cluster_num = 6
+        let cluster_num = 5
         const event2vec = event=> [event.addr.x, event.addr.y, event.year*100000]
         let cluster_data = nian_pu.map(elm=> event2vec(elm))
         const randomInt = num => Math.floor(num*Math.random())
@@ -101,8 +103,8 @@ export default class MapAndLifeView extends React.Component{
                 [start_x, start_y] = projection([event.addr.x, event.addr.y])
                 end_x = x_scale(time)
                 end_y = life_line_events.props.top
-                let dy = (end_x-start_x)/3
-                dy = (start_y+dy)<=end_y?dy:0
+                let dy = Math.abs((end_x-start_x)/3)
+                dy = (start_y-dy)<=end_y?dy:0
 
                 d3.select(link_paths).append('path')
                 .attr('d', liner([
@@ -112,11 +114,11 @@ export default class MapAndLifeView extends React.Component{
                 ]))
                 // .attr('class', '')
                 .attr("stroke",'#78787d')
-                .attr("stroke-width",2)
+                .attr("stroke-width",1)
+                .attr('opacity', 0.5)
                 .attr("fill","none");
             }
         })
-        // .curve(d3.curveBasis)
         // console.log(life_cluster)
     }
     static get defaultProps() {
@@ -155,6 +157,15 @@ class Map extends React.Component{
         this.path = d3.geoPath()
                 .projection(this.projection);
     }
+
+    onSelectedTimeChange = autorun(()=>{
+        const time_range = selected_time_range.get()
+        if (time_range[0]!==0) {
+            this.drawPath(time_range)
+        }else{
+            // 删除轨迹
+        }
+    })
     componentDidMount(){
         this.initMap()
         this.drawPlace()
@@ -190,6 +201,48 @@ class Map extends React.Component{
         //     d3.select(this.refs.container).attr('transform',d3.event.transform)
         // }))
     }
+    drawPath(range){
+        let {nian_pu, addrs, life_cluster} = this.props
+        const {projection} = this
+        let node = this.refs.place
+
+        if (range) {
+            nian_pu = nian_pu.filter(elm=>  elm.time<range[1] && elm.time>range[0])
+        }
+        // 画轨迹
+        const lineFunction = d3.line()
+                            .x(d=>projection([d.addr.x, d.addr.y])[0])
+                            .y(d=>projection([d.addr.x, d.addr.y])[1])
+
+        const move_path_canvas = d3.select(node)
+        move_path_canvas.selectAll('.move_path').remove()
+        let path2num = {}
+        nian_pu.forEach((elm, index) => {
+            if(index===nian_pu.length-1){
+                return
+            }
+            const next_addr = nian_pu[index+1].addr
+            const id = elm.addr.name + next_addr.name
+            path2num[id] = path2num[id] || 0
+            path2num[id]++
+        });
+        nian_pu.forEach((elm, index) => {
+            if(index===nian_pu.length-1){
+                return
+            }
+            const next = nian_pu[index+1]
+            if (elm.addr!==next.addr) {
+                move_path_canvas.append('path')
+                .attr('d', lineFunction([
+                    elm, next
+                ]))
+                .attr('class', 'move_path')
+                .attr("stroke",'#78787d')
+                .attr("stroke-width", path2num[elm.addr.name + next.addr.name])
+                .attr("fill","none")
+            }
+        });
+    }
     drawPlace(){
         const {projection} = this
         const {nian_pu, addrs, life_cluster} = this.props
@@ -199,58 +252,18 @@ class Map extends React.Component{
         // addr_names = addr_names.join('-')
         // console.log(addr_names)
 
+        this.drawPath()
         let node = this.refs.place
 
 
         const addr2poteries = dataStore.getAddr2Poetry()
+        // console.log(dataStore.getAddr2Poetry(), dataStore.getTime2Poetry())
         const lengths = Object.keys(addr2poteries).map(elm=> addr2poteries[elm].length)
         const max = Math.max(...lengths), 
               min = Math.min(...lengths)
         // console.log(max, min, lengths)
-        const rscale = d3.scaleLinear().domain([min, max]).range([3,18])
+        const rscale = d3.scaleLinear().domain([min, max]).range([3,12])
 
-        // 画轨迹
-        // const lineFunction = d3.line()
-        //                     .x(d=>projection([d.addr.x, d.addr.y])[0])
-        //                     .y(d=>projection([d.addr.x, d.addr.y])[1])
-        //                     // .interpolate("linear");
-
-        // let path_data = []
-        // let node_data = {}
-        // addrs.forEach(elm=>{
-        //     let [x,y] = projection([elm.x, elm.y])
-        //     node_data[elm.name] = {
-        //         x: x,
-        //         y: y,
-        //     }
-        // })
-        // d3.select(node).selectAll('.move_path').remove()
-        // nian_pu.forEach((elm, index) => {
-        //     if(index===nian_pu.length-1){
-        //         return
-        //     }
-        //     let next_event = nian_pu[index+1]
-        //     path_data.push({
-        //         source: elm.addr.name,
-        //         target: next_event.addr.name,
-        //     })
-        // });
-        // // 给轨迹边绑定
-        // let fbundling = forceBundle()
-        //                 .step_size(0.01)
-        //                 .compatibility_threshold(0.5)
-        //                 .nodes(node_data)
-        //                 .edges(path_data)
-        // let bundle_links = fbundling()
-        // // console.log(bundle_links)
-        // bundle_links.forEach(arr=>{
-        //     d3.select(node).append('path')
-        //     .attr('d', (d3.line().x(d=>d.x).y(d=>d.y).curve(d3.curveBasis))(arr))
-        //     .attr('class', 'move_path')
-        //     .attr("stroke",'#78787d')
-        //     .attr("stroke-width",2)
-        //     .attr("fill","none")
-            
         // })
         // console.log(life_cluster)
         // 画地点
@@ -322,7 +335,7 @@ class LifeLineEvents extends React.Component{
         this.true_top = top
         this.true_buttom = top+height
 
-        // 画线上时间和线上面的点
+        
         let times = nian_pu.map(elm=> elm.time.getTime())
         let years = nian_pu.map(elm=> elm.year)
         times = [...new Set(times)]
@@ -336,6 +349,28 @@ class LifeLineEvents extends React.Component{
               .range([padding,width-padding])
         this.x_scale = x_scale
 
+        // 画几个阶段
+        console.log(life_cluster)
+        const {clusters} = life_cluster
+        const {life_stages} = this.refs
+        clusters.forEach((cluster,index)=>{
+            const next_cluster = clusters[index+1]
+            let times = cluster.map(elm=> elm.time), next_times = next_cluster && next_cluster.map(elm=> elm.time)
+            const max_time = next_cluster? Math.min(...next_times) : Math.max(...times), 
+                  min_time = Math.min(...times)
+            d3.select(life_stages).append('rect')
+            .attr('x', d=> x_scale(min_time))
+            .attr('y', d=> 0)
+            .attr('width', x_scale(max_time)-x_scale(min_time))
+            .attr('height', height)
+            .attr('fill', index%2?'#efefef':'rgb(245, 245, 245)')
+            .on('mouseover', event=>{
+                // console.log(event, min_time, max_time)
+                selected_time_range.set([min_time, max_time])
+            })
+        })
+
+        // 画线上时间和线上面的点
         const {kuang_g} = this.refs
         let max_year = max_time.getFullYear(), min_year = min_time.getFullYear()
         const year2Date = year=> {
@@ -452,6 +487,7 @@ class LifeLineEvents extends React.Component{
         return (
         <g className='lifeLineEvent' ref='container'>
             <g ref='kuang_g'>
+                <g ref='life_stages'></g>
                 <path ref='overline' className='underline'></path>
                 <path ref='score_line' className='score_line'></path>
                 <g ref='dc_line'></g>

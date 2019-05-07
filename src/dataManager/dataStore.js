@@ -9,6 +9,7 @@ import trigger_imp from '../data/年谱信息/trigger_imp.json'
 import stateManager from './stateManager.js'
 import all_songci from '../data/诗词数据/全宋词.json'
 import sushi_potery_info from '../data/诗词数据/苏轼词编年.json'
+import xingqiji_potery_info from '../data/诗词数据/辛弃疾词编年.json'
 import　levenshtein from　'fast-levenshtein'
 import eucDist from 'euclidean-distance'
 
@@ -45,13 +46,14 @@ class DataStore{
             songci.name = first_paragraph.split('，')[0].replace('。', '')
 
             // 给事件时间绑定
-            const has_bianian_poets = ['苏轼']
+            const has_bianian_poets = ['苏轼', '辛弃疾']
             has_bianian_poets.forEach(poet_name=>{
                 if(author===poet_name){
                     let poetry_info = undefined
                     if(author==='苏轼')
                         poetry_info = sushi_potery_info
-
+                    else if(author==='辛弃疾')
+                        poetry_info = xingqiji_potery_info
                     const name = songci.name
                     
                     if (poetry_info[name]) {
@@ -129,7 +131,7 @@ class DataStore{
 
     constructDijGraph(person){
         // console.log(person)
-        const max_depth = 2, p2depth = {}
+        const max_depth = 1, p2depth = {}
         const {person2reltions} = this
         if (!person2reltions[person]) {
             console.warn(person, '没有关系数据')
@@ -212,8 +214,10 @@ class DataStore{
         let year2poetry = {}
         poetries.forEach(elm=>{
             const {time} = elm.info
-            year2poetry[time] = year2poetry[time] || []
-            year2poetry[time].push(elm)
+            if (time!=='') {
+                year2poetry[time] = year2poetry[time] || []
+                year2poetry[time].push(elm)                
+            }
         })
         // console.log(year2poetry)
         return year2poetry

@@ -32,7 +32,7 @@ export default class PoetryView extends React.Component{
         // console.log(center_poetry)
         const {paragraphs} = center_poetry
         const all_text = potery2text(center_poetry).split('')
-        console.log(potery2text(center_poetry))
+        // console.log(potery2text(center_poetry))
 
         const yun_bus = all_text.map(word=>{
             let yun_bu = dataStore.word2yun[word]

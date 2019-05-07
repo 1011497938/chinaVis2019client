@@ -43,6 +43,11 @@ class App extends Component {
         key: '苏轼',
         value: '苏轼',
         text: '苏轼'
+      },
+      {
+        key: '辛弃疾',
+        value: '辛弃疾',
+        text: '辛弃疾'
       }
     ]
     const table_width = width/5, per_info_width = width/3-table_width
@@ -60,7 +65,7 @@ class App extends Component {
               onChange={(event, data)=>{
                 const {value} = data
               }}
-              defaultValue={person_options[0].value}
+              defaultValue={stateManager.center_person}
               search
               selection
               options={person_options}/>
