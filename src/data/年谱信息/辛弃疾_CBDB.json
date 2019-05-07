@@ -1,0 +1,2125 @@
+[
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "赵善括",
+        "page_rank": 0.004642972823239552
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "文风效法Y",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      1180,
+      1182
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1199,
+      1199
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "刘克庄",
+        "page_rank": 0.44937395151201404
+      }
+    ],
+    "trigger": {
+      "name": "书序由Y所作",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      1192,
+      1194
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "朝散大夫"
+  },
+  {
+    "time_range": [
+      1203,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1177,
+      1177
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "知某州军州事"
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "刘辰翁",
+        "page_rank": 0.037508924308448884
+      },
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "书序由Y所作",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      1199,
+      1199
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "刘辰翁",
+        "page_rank": 0.037508924308448884
+      }
+    ],
+    "trigger": {
+      "name": "书序由Y所作",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      1291,
+      1291
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "刘辰翁",
+        "page_rank": 0.037508924308448884
+      },
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "书序由Y所作",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1172,
+      1172
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "知某州军州事"
+  },
+  {
+    "time_range": [
+      1175,
+      1175
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "陈亮",
+        "page_rank": 0.10732269170482407
+      }
+    ],
+    "trigger": {
+      "name": "书跋由Y所作",
+      "score": 4
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "张安国",
+        "page_rank": 0.004171531314353838
+      },
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "逮捕",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "周孚",
+        "page_rank": 0.00856377857126608
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "赠诗文",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "周孚",
+        "page_rank": 0.00856377857126608
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "为Y作字说名述",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "前住地",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1171,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "袁桷",
+        "page_rank": 0.10366898066907129
+      }
+    ],
+    "trigger": {
+      "name": "书跋由Y所作",
+      "score": 4
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "党怀英",
+        "page_rank": 0.0004635034793726488
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "同学同门",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "陈亮",
+        "page_rank": 0.10732269170482407
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "为Y之建筑物题咏记命名",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "袁桷",
+        "page_rank": 0.10366898066907129
+      },
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "诗文跋由Y所作",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      1176,
+      1178
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "安抚使"
+  },
+  {
+    "time_range": [
+      1181,
+      1181
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "知某州军州事"
+  },
+  {
+    "time_range": [
+      1182,
+      1182
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "赵希怿",
+        "page_rank": 0.008141896336040453
+      },
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "下属为Y",
+      "score": 3
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "周孚",
+        "page_rank": 0.00856377857126608
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "为Y作祝词",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "刘过",
+        "page_rank": 0.004291145115482263
+      }
+    ],
+    "trigger": {
+      "name": "致书Y",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      1203,
+      1205
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "宝谟阁待制"
+  },
+  {
+    "time_range": [
+      1140,
+      1140
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "出生",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "承务郎"
+  },
+  {
+    "time_range": [
+      1179,
+      1179
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "朱熹",
+        "page_rank": 1.0
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "友",
+      "score": 4
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "尚书省兵部侍郎"
+  },
+  {
+    "time_range": [
+      1199,
+      1199
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "杜斿",
+        "page_rank": 0.0030017061496035746
+      }
+    ],
+    "trigger": {
+      "name": "与Y游",
+      "score": 4
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "三丞"
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "崔敦礼",
+        "page_rank": 0.002528818183829995
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "为Y之建筑物题咏记命名",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "离开",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "主角",
+        "person": "戴表元",
+        "page_rank": 0.08037433947605943
+      }
+    ],
+    "trigger": {
+      "name": "为Y作学记书院记",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1204,
+      1204
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "知某府军府事"
+  },
+  {
+    "time_range": [
+      1180,
+      1182
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "右文殿修撰"
+  },
+  {
+    "time_range": [
+      1180,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "知某府军府事"
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "周孚",
+        "page_rank": 0.00856377857126608
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "为Y之建筑物题咏记命名",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "离开",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1206,
+      1206
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "知某府军府事"
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "离开",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "安抚使"
+  },
+  {
+    "time_range": [
+      1180,
+      1180
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "知某州军州事"
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "太府寺卿"
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "杜斿",
+        "page_rank": 0.0030017061496035746
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "与Y游",
+      "score": 4
+    }
+  },
+  {
+    "time_range": [
+      1246,
+      1246
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "刘克庄",
+        "page_rank": 0.44937395151201404
+      },
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "书序由Y所作",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      1199,
+      1199
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "汪莘",
+        "page_rank": 0.007863848231374114
+      }
+    ],
+    "trigger": {
+      "name": "书序由Y所作",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "朱熹",
+        "page_rank": 1.0
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "答Y启",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "汪莘",
+        "page_rank": 0.007863848231374114
+      },
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "书序由Y所作",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "邓林",
+        "page_rank": 0.004115910565899275
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "友",
+      "score": 4
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "邓林",
+        "page_rank": 0.004115910565899275
+      }
+    ],
+    "trigger": {
+      "name": "友",
+      "score": 4
+    }
+  },
+  {
+    "time_range": [
+      1191,
+      1193
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "安抚使"
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "陈亮",
+        "page_rank": 0.10732269170482407
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "致书Y",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      1178,
+      1178
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1192,
+      1192
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "知某州军州事"
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "吕祖谦",
+        "page_rank": 0.4023225879127109
+      }
+    ],
+    "trigger": {
+      "name": "为Y作祭文",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "黄干",
+        "page_rank": 0.048143299568485454
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "致书Y",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      1202,
+      1204
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "朝请大夫"
+  },
+  {
+    "time_range": [
+      1214,
+      1214
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "汪莘",
+        "page_rank": 0.007863848231374114
+      },
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "书序由Y所作",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      1203,
+      1203
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "知某州军州事"
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "陈成父",
+        "page_rank": 0.011587586984316214
+      }
+    ],
+    "trigger": {
+      "name": "礼待",
+      "score": 3
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "主角",
+        "person": "周必大",
+        "page_rank": 0.5324648204154986
+      }
+    ],
+    "trigger": {
+      "name": "为Y作传",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "安抚使"
+  },
+  {
+    "time_range": [
+      1207,
+      1207
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "死亡",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "籍贯基本地址)",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "党怀英",
+        "page_rank": 0.0004635034793726488
+      }
+    ],
+    "trigger": {
+      "name": "同学同门",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1203,
+      1205
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "朝议大夫"
+  },
+  {
+    "time_range": [
+      1181,
+      1181
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "枢密院都承旨"
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "韩玉",
+        "page_rank": 0.005407540592680901
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "相唱和",
+      "score": 3
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1199,
+      1199
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "朱熹",
+        "page_rank": 1.0
+      }
+    ],
+    "trigger": {
+      "name": "友",
+      "score": 4
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1177,
+      1177
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1203,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "主角",
+        "person": "陈亮",
+        "page_rank": 0.10732269170482407
+      }
+    ],
+    "trigger": {
+      "name": "为Y作画赞画像记)",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1203,
+      1203
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "大理寺少卿"
+  },
+  {
+    "time_range": [
+      1177,
+      1179
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "入仕",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "韩玉",
+        "page_rank": 0.005407540592680901
+      }
+    ],
+    "trigger": {
+      "name": "相唱和",
+      "score": 3
+    }
+  },
+  {
+    "time_range": [
+      1176,
+      1178
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "安抚使"
+  },
+  {
+    "time_range": [
+      1177,
+      1177
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "知某府军府事"
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1192,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1214,
+      1214
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "杜斿",
+        "page_rank": 0.0030017061496035746
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "与Y游",
+      "score": 4
+    }
+  },
+  {
+    "time_range": [
+      1205,
+      1205
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "迁住地",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1171,
+      1173
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "右宣教郎"
+  },
+  {
+    "time_range": [
+      1176,
+      1178
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "对象",
+        "person": "杜斿",
+        "page_rank": 0.0030017061496035746
+      }
+    ],
+    "trigger": {
+      "name": "与Y游",
+      "score": 4
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "担任",
+      "score": 8
+    },
+    "detail": "集英殿修撰"
+  },
+  {
+    "time_range": [
+      1191,
+      1193
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "主角",
+        "person": "谢枋得",
+        "page_rank": 0.011010685352755168
+      }
+    ],
+    "trigger": {
+      "name": "为Y作墓志铭",
+      "score": 3
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "刘克庄",
+        "page_rank": 0.44937395151201404
+      },
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "书序由Y所作",
+      "score": 2
+    }
+  },
+  {
+    "time_range": [
+      1206,
+      1206
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      },
+      {
+        "role": "主角",
+        "person": "徐元杰",
+        "page_rank": 0.014194296475461565
+      }
+    ],
+    "trigger": {
+      "name": "为Y作画赞画像记)",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1192,
+      1192
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      1202,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "卸任",
+      "score": 0
+    }
+  },
+  {
+    "time_range": [
+      -9999,
+      9999
+    ],
+    "roles": [
+      {
+        "role": "主角",
+        "person": "陆九渊",
+        "page_rank": 0.11911352005748534
+      },
+      {
+        "role": "对象",
+        "person": "辛弃疾",
+        "page_rank": 0.0170243217695021
+      }
+    ],
+    "trigger": {
+      "name": "致书Y",
+      "score": 2
+    }
+  }
+]

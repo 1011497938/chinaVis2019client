@@ -1,0 +1,34 @@
+$borderWidth: 2px;
+@font-face{
+  font-family: 'DFPSongW9';
+  src : url('./static/DFPSongW9-GB5.ttf');
+}
+@font-face{
+  font-family: 'STKaiti';
+  src : url('./static/STKaiti.ttf');
+}
+@font-face{
+  font-family: 'HYSunWanMinCaoShu';
+  src : url('./static/HYSunWanMinCaoShuW-2.ttf');
+}
+/* 设置滚动条的样式 */
+body ::-webkit-scrollbar {
+  width:6px;
+}
+/* 滚动槽 */
+body ::-webkit-scrollbar-track {
+-webkit-box-shadow:inset006pxrgba(0,0,0,0.3);
+border-radius:10px;
+}
+/* 滚动条滑块 */
+body ::-webkit-scrollbar-thumb {
+border-radius:0px;
+width: 3px;
+background:rgba(0,0,0,0.1);
+-webkit-box-shadow:inset006pxrgba(0,0,0,0.5);
+}
+body{
+  overflow: hidden;
+  border: none;
+  font-family: 'STKaiti';
+}
