@@ -68,10 +68,12 @@ export default class WordCloud extends React.Component{
 
 
         if(!p1[0] && !p2[0]){
+            let years= Object.keys(year2poetry).map(elm=> parseInt(elm))
+            let center_year = (Math.max(...years)+Math.min(...years))/2
             p1 = []
             p2 = []
             for(let year in year2poetry){
-                if(parseInt(year)<1080){
+                if(parseInt(year)<center_year){
                     p1 = [...p1, ...year2poetry[year]]
                 }else{
                     p2 = [...p2, ...year2poetry[year]]

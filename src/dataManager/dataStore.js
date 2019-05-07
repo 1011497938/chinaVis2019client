@@ -131,7 +131,7 @@ class DataStore{
 
     constructDijGraph(person){
         // console.log(person)
-        const max_depth = 1, p2depth = {}
+        const max_depth = 2, p2depth = {}
         const {person2reltions} = this
         if (!person2reltions[person]) {
             console.warn(person, '没有关系数据')
@@ -348,14 +348,15 @@ class DataStore{
             if (!this_pingji) {
                 return 0
             }
-
-            // console.log(this_pingji, guanzhi)
+            // console.log(this_pingji, guanzhi, pingji.findIndex(elm => elm===this_pingji['品级']))
             return pingji.findIndex(elm => elm===this_pingji['品级'])
         }
         let year2score = {}
         years.forEach(year=>{
-            const windows_size = 5
+            const windows_size = 7
             let related_events = certain_events.filter(event=> event.time_range[0]<=year&&year-event.time_range[0]<windows_size)
+            // related_events = related_events.filter(elm=> elm.trigger.name==='担任')
+            // console.log(related_events, years)
             const getImp = event=>{
                 const {trigger, roles} = event
                 const main_role = roles.filter(elm=> elm.person===poet_name)[0]
@@ -376,7 +377,7 @@ class DataStore{
                 const imp = getImp(event)
                 // console.log(trigger.name + ' ' +main_role.role)
                 // console.log(imp, score, this_year, year, Math.exp(this_year-year) ,Math.log(imp*score*Math.exp(this_year-year)))
-                return total +　Math.log(imp*score*Math.exp(this_year-year)+1)/total_imp
+                return total +　Math.log(imp*score*Math.exp(this_year-year)+1) ///total_imp
             }, 0)
             if(score!==0)
                 year2score[year] = score

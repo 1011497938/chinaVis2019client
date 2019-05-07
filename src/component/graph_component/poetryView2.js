@@ -254,19 +254,6 @@ export default class PoetryView extends React.Component{
 
     }
     draw(){
-        // related_people.push(p1)
-        // related_people.push(p2)
-        // let count = 0
-        // related_people.forEach(e1=>{
-        //     related_people.forEach(e2=>{
-        //         if (dataStore.person2reltions[e1][e2]) {
-        //             // console.log(e1, e2, dataStore.person2reltions[e1][e2])
-        //             count++
-        //         }
-        //     })
-        // })
-        // console.log(count, related_people)
-
         const {container_svg, container_g} = this.refs
         d3.select(container_g).selectAll('g').remove()
         const center_poetry = stateManager.center_poetry
@@ -334,21 +321,46 @@ export default class PoetryView extends React.Component{
                         tra_y = 4-tra_y
                         const center_x = now_x-tra_width/(array.length===3?2:4) +index*tra_width/2, 
                         center_y = tra_y*dy + dy*2
-                        let tra_points = [
-                            [-tra_width/2, 0],
-                            [tra_width/2, 0],
-                            [0, -tra_width/2*Math.sqrt(3)],
-                        ];
-                        tra_points.forEach(elm=>{
-                            elm[0] += center_x
-                            elm[1] += center_y
-                        })
+
+                        // 画连线
+                        if(index!==array.length-1){
+                            const next_center_x = now_x-tra_width/(array.length===3?2:4) +(index+1)*tra_width/2,
+                            next_center_y = (4-array[index+1])*dy + dy*2
+                            ryth_g.append('path')
+                            // .attr('class', 'lalals')
+                            .attr('d', normal_liner([
+                                [center_x, center_y],
+                                [next_center_x, next_center_y]
+                            ]))
+                            .attr("stroke",  tra_color!=='none'?tra_color:'#78787d')
+                            .attr("stroke-width",1)
+                            .attr("fill","none");
+                        }
+
+                        ryth_g.append('circle')
+                        .attr('r', 2)
+                        .attr('fill', '#f5f5f5')
+                        .attr('cx', center_x)
+                        .attr('cy', center_y)
+                        .attr('stroke', tra_color!=='none'?tra_color:'#78787d')
+                        .attr('stroke-width', 1)
+
+                        // 不画三角形啦
+                        // let tra_points = [
+                        //     [-tra_width/2, 0],
+                        //     [tra_width/2, 0],
+                        //     [0, -tra_width/2*Math.sqrt(3)],
+                        // ];
+                        // tra_points.forEach(elm=>{
+                        //     elm[0] += center_x
+                        //     elm[1] += center_y
+                        // })
                         
-                        let points_text =  tra_points.map(elm=> elm.join(',')).join(' ')
-                        ryth_g.append('polygon')
-                        .attr('points', points_text)
-                        .attr('fill', tra_color)
-                        .attr('stroke', tra_color!=='none'?tra_color:'black')
+                        // let points_text =  tra_points.map(elm=> elm.join(',')).join(' ')
+                        // ryth_g.append('polygon')
+                        // .attr('points', points_text)
+                        // .attr('fill', tra_color)
+                        // .attr('stroke', tra_color!=='none'?tra_color:'black')
                     })
                     now_x += dx                    
                 })
@@ -394,7 +406,7 @@ export default class PoetryView extends React.Component{
                             [x2, cross_line_y],
                             [x2, y]
                         ]))
-                        .attr('class', 'yayun_line　' +elm+char)
+                        // .attr('class', 'yayun_line　' +elm+char)
                         .attr("stroke",'#78787d')
                         .attr("stroke-width",2)
                         .attr("fill","none");

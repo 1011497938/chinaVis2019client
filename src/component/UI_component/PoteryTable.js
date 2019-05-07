@@ -61,20 +61,23 @@ export default class EventTable extends React.Component{
       <div style={{width: width, height: height, overflowY: 'auto', padding: 10}}>
         <List celled selection verticalAlign='middle'>
           {
-            data.map((element,index) => {
-              let text = element.paragraphs[0]
+            data.map((elm,index) => {
+              let text = elm.paragraphs[0]
+              // console.log(elm, elm.true_words, elm.words)
               if (filter_word!=='') {
-                text = element.paragraphs.find((elm,index)=> element.true_words[index].includes(filter_word))
-                text = text.split(filter_word)
-                text = this.highLight(text, filter_word)
-                console.log(text)
+                text = elm.paragraphs.filter((elm2,index)=> (elm.true_words|| elm.words)[index].includes(filter_word))[0]
+                // console.log(text)
+                // text = text.split(filter_word)
+                // text = this.highLight(text, filter_word)
+                // console.log(text)
               }
               // 还需要加上颜色的高亮
+              // console.log(elm)
               return (
               <List.Item key={index}>
                 <List.Content>
                   {/* <span style={{color: 'black'}}><div style={{width: 100}}>{element.name}</div></span> */}
-                  <span>{text}</span>
+                  <span>{(elm.info && (elm.info.time + '-' + elm.info.location + '-'))+text}</span>
                 </List.Content>
               </List.Item>
               )
