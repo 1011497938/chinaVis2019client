@@ -384,13 +384,14 @@ export default class PoetryView extends React.Component{
             const y = 6*dy/2*Math.sqrt(3) + dy + 2
             const line_dy = (row_dy - y)/8
             const yun_bu2y = {}
+            const hanling_zhengyun = dataStore.hanling_zhengyun
             chars.forEach((char, c_index)=>{
                 // 这一行
                 for (let index = c_index+1; index < chars.length; index++) {
                     const elm = chars[index];
-                    const yun_bu1 = dataStore.word2yun[char],
-                          yun_bu2 = dataStore.word2yun[elm]
-                    if(yun_bu1===yun_bu2 && yun_bu1){
+                    const yun_bu1 = hanling_zhengyun[char],
+                          yun_bu2 = hanling_zhengyun[elm]
+                    if(yun_bu1===yun_bu2 && yun_bu1 && (index-c_index)<5){
                         const x1 = paragraphs2x[p_index][c_index],
                               x2 = paragraphs2x[p_index][index]
                         let cross_line_y = yun_bu2y[yun_bu1]?yun_bu2y[yun_bu1]:y + line_dy *++links_num
@@ -415,36 +416,36 @@ export default class PoetryView extends React.Component{
                 }
 
                 // 和下一行
-                const next_paragraph = paragraphs[p_index+1]
-                if (!next_paragraph) {
-                    return
-                }
-                const next_char = next_paragraph.split('')
-                for (let index = c_index+1; index < next_char.length; index++) {
-                    const elm = next_char[index];
-                    const yun_bu1 = dataStore.word2yun[char],
-                          yun_bu2 = dataStore.word2yun[elm]
-                    if(yun_bu1===yun_bu2 && yun_bu1){
-                        const x1 = paragraphs2x[p_index][c_index],
-                              x2 = paragraphs2x[p_index+1][index]
-                        let cross_line_y = yun_bu2y[yun_bu1]?yun_bu2y[yun_bu1]:y + line_dy *++links_num
-                        yun_bu2y[yun_bu1] = cross_line_y
+                // const next_paragraph = paragraphs[p_index+1]
+                // if (!next_paragraph) {
+                //     return
+                // }
+                // const next_char = next_paragraph.split('')
+                // for (let index = c_index+1; index < next_char.length; index++) {
+                //     const elm = next_char[index];
+                //     const yun_bu1 = hanling_zhengyun[char],
+                //           yun_bu2 = hanling_zhengyun[elm]
+                //     if(yun_bu1===yun_bu2 && yun_bu1){
+                //         const x1 = paragraphs2x[p_index][c_index],
+                //               x2 = paragraphs2x[p_index+1][index]
+                //         let cross_line_y = yun_bu2y[yun_bu1]?yun_bu2y[yun_bu1]:y + line_dy *++links_num
+                //         yun_bu2y[yun_bu1] = cross_line_y
 
 
-                        yayun_g.append('path')
-                        .attr('d', normal_liner([
-                            [x1, y],
-                            [x1, cross_line_y],
-                            [x2, cross_line_y],
-                            [x2, row_dy-20]
-                        ]))
-                        .attr('class', 'yayun_line　' +elm+char)
-                        .attr("stroke",'#78787d')
-                        .attr("stroke-width",2)
-                        .attr("fill","none");
-                        break
-                    }
-                }
+                //         yayun_g.append('path')
+                //         .attr('d', normal_liner([
+                //             [x1, y],
+                //             [x1, cross_line_y],
+                //             [x2, cross_line_y],
+                //             [x2, row_dy-20]
+                //         ]))
+                //         .attr('class', 'yayun_line　' +elm+char)
+                //         .attr("stroke",'#78787d')
+                //         .attr("stroke-width",2)
+                //         .attr("fill","none");
+                //         break
+                //     }
+                // }
             })
         })
     }

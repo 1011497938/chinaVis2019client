@@ -122,7 +122,7 @@ export default class WordCloud extends React.Component{
                     data1={data1}
                     data2={data2}/>                 
                 </div>
-                <div style={{position:'absolute', top:0, right:10, top: 3,width: 200}}>
+                <div style={{position:'absolute', top:0, right:-216, top: 3,width: 200}}>
                     <Dropdown
                     placeholder='State'
                     fluid

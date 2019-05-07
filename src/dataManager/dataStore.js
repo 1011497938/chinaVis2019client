@@ -4,6 +4,7 @@ import sushi_nianpu from '../data/年谱信息/苏轼.json'
 import sushi_nianpu_cbdb from '../data/年谱信息/苏轼_CBDB.json'
 
 import pingshuiyun from '../data/平水韵.json'
+import hanling_zhengyun from '../data/诗词数据/词林正韵.json'
 import guanzhi2pingji from '../data/官职品级.json'
 import trigger_imp from '../data/年谱信息/trigger_imp.json'
 import stateManager from './stateManager.js'
@@ -87,8 +88,22 @@ class DataStore{
         for(let yun in this.pingshuiyun){
             let elm = this.pingshuiyun[yun].split('')
             this.pingshuiyun[yun] = elm
-            elm.forEach(word=> this.word2yun[word]=yun)
+            elm.forEach(word=> {
+                this.word2yun[word] = yun
+                // this.word2yun[word] = this.word2yun[word] || []
+                // this.word2yun[word].push(yun)
+            })
         }
+
+        let word2hanlin = {}
+        for(let bu in hanling_zhengyun){
+            const text = hanling_zhengyun[bu].split('')
+            text.forEach(word=>{
+                word2hanlin[word] = bu
+            })
+        }
+        this.hanling_zhengyun = word2hanlin
+
         this.simp_yuns = this.yuns.map(yun=>{
             const replace_list = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '声', '平', '上', '去', '入']
             let simp_yun = yun
@@ -131,7 +146,7 @@ class DataStore{
 
     constructDijGraph(person){
         // console.log(person)
-        const max_depth = 2, p2depth = {}
+        const max_depth = 3, p2depth = {}
         const {person2reltions} = this
         if (!person2reltions[person]) {
             console.warn(person, '没有关系数据')
@@ -595,5 +610,5 @@ export {
     getRandomColor,
 
     ribbonPathString,
-    silkRibbonPathString
+    silkRibbonPathString,
 }

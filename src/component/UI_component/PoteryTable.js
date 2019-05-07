@@ -3,7 +3,7 @@ import {autorun} from 'mobx';
 import * as d3 from 'd3';
 import stateManager from '../../dataManager/stateManager';
 import net_work from '../../dataManager/netWork';
-import {dataStore} from '../../dataManager/dataStore';
+import {dataStore, potery2text} from '../../dataManager/dataStore';
 import { Button, Image, List } from 'semantic-ui-react'
 
 
@@ -62,7 +62,7 @@ export default class EventTable extends React.Component{
         <List celled selection verticalAlign='middle'>
           {
             data.map((elm,index) => {
-              let text = elm.paragraphs[0]
+              let text = potery2text(elm).slice(0, 16) + '...'
               // console.log(elm, elm.true_words, elm.words)
               if (filter_word!=='') {
                 text = elm.paragraphs.filter((elm2,index)=> (elm.true_words|| elm.words)[index].includes(filter_word))[0]
