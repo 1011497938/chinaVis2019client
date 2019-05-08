@@ -283,6 +283,7 @@ class Map extends React.Component{
             d.x,
             d.y
             ]) + ")")
+        .attr('class', d=> d.name)
         .attr('fill',(d, index)=>{
             // console.log(d, index)
             // for (let index = 0; index < life_cluster.centroids.length; index++) {

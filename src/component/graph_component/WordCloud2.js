@@ -184,8 +184,8 @@ class wordElm{
         this.text = _object.text
         this.num = _object.value
         this.text_len = this.text.split('').length 
-        this.width = this.text_len * this.num // * 250 * 10 /2
-        this.height = this.num //* 250 * 10 /2
+        this.width = this.text_len * this.num / 1.2// * 250 * 10 /2
+        this.height = this.num / 1.2 //* 250 * 10 /2
         this.center_x = 0
         this.center_y = 0
 

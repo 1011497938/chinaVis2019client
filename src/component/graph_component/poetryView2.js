@@ -254,7 +254,8 @@ export default class PoetryView extends React.Component{
         })
         .attr('class', d=> d.source.name+d.target.name)
         .style("stroke", d=>{
-            return is_main(d)? "#ccc" : 'none'
+            return '#ccc'
+            // return is_main(d)? "#ccc" : 'none'
         })
         .style("stroke-width", 1)
         .attr('class', d => {
@@ -269,9 +270,9 @@ export default class PoetryView extends React.Component{
         .append("circle")
         .attr('r', d=>{
             const {name} = d
-            if(name===center_p){
-                return 5
-            }
+            // if(name===center_p){
+            //     return 5
+            // }
             const poteries = dataStore.getPoetries()
             let count = 0
             // console.log(poteries)
@@ -280,8 +281,8 @@ export default class PoetryView extends React.Component{
                 sim.forEach(par=>{
                     par.forEach(elm=>{
                         const index = elm.index[0]
-                        const potery = dataStore.poteries[index]
-                        if (potery.author===name) {
+                        const sim_potery = dataStore.poteries[index]
+                        if (sim_potery.author===name && potery!==sim_potery) {
                             count++
                         }
                     })
@@ -294,9 +295,9 @@ export default class PoetryView extends React.Component{
         .attr('cx', d=> xScale(d.x))
         .attr('cy', d=> yScale(d.y))
         .on('mouseover', (value, event)=>{
-            console.log(value)
+            // console.log(value)
             let paths = container_g.selectAll('.'+value.name)
-            console.log(paths)
+            // console.log(paths)
             container_g.selectAll('.hiden_relation_path').style('stroke', 'none')
             paths.style('stroke', '#ccc')
         })
