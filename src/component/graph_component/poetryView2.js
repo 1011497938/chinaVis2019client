@@ -140,6 +140,9 @@ export default class PoetryView extends React.Component{
         
         const center_p = center_poetry.author, other_p = selected_sim_potery.author
         let related_p = dataStore.myDijkstra(center_p, other_p)  //共同的交集
+        const net_work1 = dataStore.person2dijkstra_graph[center_p] || dataStore.constructDijGraph(center_p),
+              net_work2 = dataStore.person2dijkstra_graph[other_p] || dataStore.constructDijGraph(other_p)
+
         d3.select(relation_g).selectAll('g').remove()
         if (related_p.length==0) {
             console.warn(center_p, other_p,'没有关系')
@@ -169,16 +172,27 @@ export default class PoetryView extends React.Component{
         const p2index = {}
         const nodes = related_p.map((elm,index)=>{
             p2index[elm] = index
-            return {
+            let node = {
                 name: elm
             }
+            return node
         })
         const edges = []
         related_p.forEach(p1=>{
+            // const ps = [other_p,  center_p]
+            // ps.forEach(p2=>{
+            //     const rel = dataStore.person2reltions[p1][p2]
+            //     if (rel) {
+            //         edges.push({
+            //             source: p2index[p1],
+            //             target: p2index[p2],
+            //             type: rel,
+            //         })
+            //     }
+            // })
             related_p.forEach(p2=>{
                 const rel = dataStore.person2reltions[p1][p2]
                 if (rel) {
-                    console.log(p1, p2, rel)
                     edges.push({
                         source: p2index[p1],
                         target: p2index[p2],
@@ -189,19 +203,29 @@ export default class PoetryView extends React.Component{
         })
 
         const graph_width = width-start_x-40, graph_height = graph_width
-        d3.forceSimulation(nodes)
+        const force = d3.forceSimulation(nodes)
         .force("charge", d3.forceManyBody())
         .force("link", d3.forceLink(edges))
         .force("center",d3.forceCenter())
-
         let xs = nodes.map(elm=> elm.x), ys = nodes.map(elm=> elm.y)
         const max_x = Math.max(...xs), max_y = Math.max(...ys),
               min_x = Math.min(...xs), min_y = Math.min(...ys)
+        nodes.forEach(node=>{
+            const {name} = node
+            if(name===center_p){
+                node.x = min_x
+                node.y = (max_y+min_y)/2
+            }else if(name===other_p){
+                node.x = max_x
+                node.y = (max_y+min_y)/2
+            }
+        })
+        force.restart()
         const xScale = d3.scaleLinear().domain([min_x, max_x]).range([0, graph_width]),
               yScale = d3.scaleLinear().domain([min_y, max_y]).range([60, graph_height+60])
         // console.log(max_x, max_y)
 
-        // console.log(edges, nodes)
+        // console.log('edges',edges, nodes)
         // edges.forEach(elm=>{
         //     if (elm.source.name) {
                 
@@ -211,6 +235,11 @@ export default class PoetryView extends React.Component{
         .x(d=> xScale(d.x))
         .y(d=> yScale(d.y))
 
+        const is_main = d =>{
+            const {source, target} = d
+            const names = [source, target].map(elm=> elm.name)
+            return names.includes(center_p) || names.includes(other_p)
+        }
         container_g
         .selectAll("path")
         .data(edges)
@@ -224,21 +253,52 @@ export default class PoetryView extends React.Component{
             ])
         })
         .attr('class', d=> d.source.name+d.target.name)
-        // .attr('class', 'lalalal')
-        .style("stroke", "#ccc")
+        .style("stroke", d=>{
+            return is_main(d)? "#ccc" : 'none'
+        })
         .style("stroke-width", 1)
+        .attr('class', d => {
+            const {source, target} = d
+            return  !is_main(d)?(source.name + ' ' + target.name + ' hiden_relation_path'):''
+        })
 
         container_g
         .selectAll("circle")
         .data(nodes)
         .enter()
         .append("circle")
-        .attr('r', 10)
+        .attr('r', d=>{
+            const {name} = d
+            if(name===center_p){
+                return 5
+            }
+            const poteries = dataStore.getPoetries()
+            let count = 0
+            // console.log(poteries)
+            poteries.forEach(potery=>{
+                const {sim} = potery
+                sim.forEach(par=>{
+                    par.forEach(elm=>{
+                        const index = elm.index[0]
+                        const potery = dataStore.poteries[index]
+                        if (potery.author===name) {
+                            count++
+                        }
+                    })
+                })
+            })
+            // console.log(count)
+            return Math.log(count>2?count:2)*3
+        })
         .attr('fill', '#9ea0b9')
         .attr('cx', d=> xScale(d.x))
         .attr('cy', d=> yScale(d.y))
         .on('mouseover', (value, event)=>{
             console.log(value)
+            let paths = container_g.selectAll('.'+value.name)
+            console.log(paths)
+            container_g.selectAll('.hiden_relation_path').style('stroke', 'none')
+            paths.style('stroke', '#ccc')
         })
 
         container_g

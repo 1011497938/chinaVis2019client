@@ -24,6 +24,7 @@ class App extends Component {
     }
   }
   componentWillUpdate() {
+    
   }
 
   static get defaultProps() {
@@ -34,6 +35,7 @@ class App extends Component {
   }
 
   render() {
+    // console.log(dataStore.getPoetries())
     let {width, height} = this.props
     let {potery_options} = this.state
     // console.log(potery_options)

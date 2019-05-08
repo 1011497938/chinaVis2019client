@@ -146,7 +146,7 @@ class DataStore{
 
     constructDijGraph(person){
         // console.log(person)
-        const max_depth = 3, p2depth = {}
+        const max_depth = 2, p2depth = {}
         const {person2reltions} = this
         if (!person2reltions[person]) {
             console.warn(person, '没有关系数据')
