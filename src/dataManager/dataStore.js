@@ -220,7 +220,12 @@ class DataStore{
 
     getPoetries(){
         const {center_person} = stateManager
-        return this.author2poem[center_person] || []
+        
+        return (this.author2poem[center_person] || []) 
+        // .map(elm=>{
+        //     elm.info = elm.info || {}
+        //     return elm
+        // })
     }
     getTime2Poetry(){
         const poet_name = stateManager.center_person
@@ -363,14 +368,18 @@ class DataStore{
             if (!this_pingji) {
                 return 0
             }
+            if (guanzhi==='朝请大夫') {
+                this_pingji = '从四品'
+            }
             // console.log(this_pingji, guanzhi, pingji.findIndex(elm => elm===this_pingji['品级']))
             return pingji.findIndex(elm => elm===this_pingji['品级'])
         }
         let year2score = {}
         years.forEach(year=>{
-            const windows_size = 7
+            const windows_size = 1
             let related_events = certain_events.filter(event=> event.time_range[0]<=year&&year-event.time_range[0]<windows_size)
             // related_events = related_events.filter(elm=> elm.trigger.name==='担任')
+            // console.log(year, related_events)
             // console.log(related_events, years)
             const getImp = event=>{
                 const {trigger, roles} = event

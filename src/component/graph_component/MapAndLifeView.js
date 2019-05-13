@@ -263,7 +263,7 @@ class Map extends React.Component{
               min = Math.min(...lengths)
         // console.log(max, min, lengths)
         const rscale = d3.scaleLinear().domain([min, max]).range([3,12])
-
+        // console.log(max)
         // })
         // console.log(life_cluster)
         // 画地点
@@ -285,6 +285,11 @@ class Map extends React.Component{
             ]) + ")")
         .attr('class', d=> d.name)
         .attr('fill',(d, index)=>{
+            if(d.name==='黄冈'){
+                console.log('黄州')
+                return 'red'
+            }
+                
             // console.log(d, index)
             // for (let index = 0; index < life_cluster.centroids.length; index++) {
             //     const element = life_cluster.centroids[index];
@@ -473,6 +478,7 @@ class LifeLineEvents extends React.Component{
             year = parseInt(year)
             return year<= max_year && year>=min_year
         })
+        console.log(min_num, max_num, year2potery_num)
         const normalLiner  = d3.line()
         .x(d=> x_scale(year2Date(d)))
         .y(d=> y_scale_num(year2potery_num[d]))

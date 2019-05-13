@@ -17,8 +17,14 @@ export default class EventTable extends React.Component{
 
   onFilterWordChange = autorun(()=>{
     const filter_word = stateManager.filter_word.get()
-    let poteries = dataStore.getPoetries()
-    console.log(filter_word)
+    let poteries = dataStore.getPoetries().sort((a,b)=> {
+      let time1 = a.info?a.info.time:9999
+      let time2 = b.info?b.info.time:9999
+      // console.log(a,b)
+      // console.log(a.info.time, b.info.time, parseInt(a.info.time), parseInt(b.info.time))
+      return time1-time2// parseInt(a.info.time)-parseInt(b.info.time)
+    })
+    // console.log(filter_word)
     if (filter_word==='') {
       this.setState({data: poteries})
     }else{

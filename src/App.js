@@ -5,7 +5,7 @@ import WordCloud from './component/graph_component/WordCloud2'
 import PoetryView from './component/graph_component/poetryView2';
 import { Dropdown } from 'semantic-ui-react'
 import '../node_modules/react-vis/dist/style.css';
-import { dataStore } from './dataManager/dataStore';
+import { dataStore, potery2text } from './dataManager/dataStore';
 import stateManager from './dataManager/stateManager';
 import PersonInfo from './component/UI_component/PersonInfo'
 import PoteryTable from './component/UI_component/PoteryTable'
@@ -17,7 +17,7 @@ class App extends Component {
         // console.log(elm)
         return {
           key:  index,
-          text: elm.rhythmic + '-' + elm.name,
+          text: elm.rhythmic + '-' + potery2text(elm),
           value: elm.name,
         }
       })//[]

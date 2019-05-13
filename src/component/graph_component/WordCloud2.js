@@ -80,7 +80,7 @@ export default class WordCloud extends React.Component{
                 }
             }    
         }
-        // console.log(p1)
+        console.log(p1, p2)
         const getTotalValue = data => data.reduce((total, elm)=> total+elm.value, 0)
 
         let data1 = dataStore.getWordCount(p1)

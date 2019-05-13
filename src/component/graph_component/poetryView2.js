@@ -193,6 +193,7 @@ export default class PoetryView extends React.Component{
             related_p.forEach(p2=>{
                 const rel = dataStore.person2reltions[p1][p2]
                 if (rel) {
+                    console.log(p1, rel, p2)
                     edges.push({
                         source: p2index[p1],
                         target: p2index[p2],
@@ -254,8 +255,8 @@ export default class PoetryView extends React.Component{
         })
         .attr('class', d=> d.source.name+d.target.name)
         .style("stroke", d=>{
-            return '#ccc'
-            // return is_main(d)? "#ccc" : 'none'
+            // return '#ccc'
+            return is_main(d)? "#ccc" : 'none'
         })
         .style("stroke-width", 1)
         .attr('class', d => {
@@ -453,6 +454,7 @@ export default class PoetryView extends React.Component{
                     const yun_bu1 = hanling_zhengyun[char],
                           yun_bu2 = hanling_zhengyun[elm]
                     if(yun_bu1===yun_bu2 && yun_bu1 && (index-c_index)<5){
+                        console.log(char, yun_bu1, elm, yun_bu2)
                         const x1 = paragraphs2x[p_index][c_index],
                               x2 = paragraphs2x[p_index][index]
                         let cross_line_y = yun_bu2y[yun_bu1]?yun_bu2y[yun_bu1]:y + line_dy *++links_num
@@ -515,7 +517,7 @@ export default class PoetryView extends React.Component{
         return (
         <div style={{position:'absolute', top:0, left:0, width: width, height: height, overflow: 'auto'}}>
             <div style={{position:'absolute', top: 0, left:0}}> 
-                <svg ref='container_svg' width={width} height={1080}>
+                <svg ref='container_svg' width={width} height={2080}>
                     <g ref='container_g'></g>
                     <g ref='related_g'></g>
                     <g ref='relation_g'></g>
